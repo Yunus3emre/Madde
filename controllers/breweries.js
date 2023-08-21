@@ -14,6 +14,7 @@ const breweries = async (req, res) => {
 
         res.status(200).json(data);
     } catch (error) {
+        console.error('Error fetching data:', error);
         res.status(500).json({ message: 'An error occurred while fetching data' });
     }
 };
