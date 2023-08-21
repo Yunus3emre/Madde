@@ -2,6 +2,10 @@
 # Madde
 
 Proje Açıklaması: Bu projede, Express ve MongoDB kullanarak bir RESTful API oluşturulmuştur. API, kullanıcı kimlik doğrulama ve farklı bira yerleri ile ilgili verileri yönetmek için kullanılabilecek endpointler sunar.
+
+##URL
+URL : https://madde.onrender.com 
+
 ## API Kullanımı
 
 #### Kayıt Ol
