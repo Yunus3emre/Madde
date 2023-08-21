@@ -1,4 +1,4 @@
-
+const fetch = require('node-fetch');
 
 const breweries = async (req, res) => {
     try {
