@@ -1,38 +1,72 @@
+
 # Madde
- 
+
 Proje Açıklaması: Bu projede, Express ve MongoDB kullanarak bir RESTful API oluşturulmuştur. API, kullanıcı kimlik doğrulama ve farklı bira yerleri ile ilgili verileri yönetmek için kullanılabilecek endpointler sunar.
+## API Kullanımı
 
----
+#### Kayıt Ol
 
-## Başlangıç
+```http
+  POST /register
+```
 
-Bu talimatlar, projeyi yerel makinenizde çalıştırmak ve geliştirmek için gereken adımları içerir.
+| Parametre | Tip     | Açıklama                |
+| :-------- | :------- | :------------------------- |
+| `username` | `string` | **Gerekli**. Kullanıcı adı |
+| `email` | `string` | **Gerekli**. E-mail adresi |
+| `password` | `string` | **Gerekli**. Şifre |
 
-### Gereksinimler
+#### Giriş yap
 
-Aşağıdaki yazılımların sisteminizde yüklü olduğundan emin olun:
+```http
+  GET /login
+```
 
-- Node.js
+| Parametre | Tip     | Açıklama                       |
+| :-------- | :------- | :-------------------------------- |
+| `username` | `string` | **Gerekli**. Kullanıcı adı |
+| `password` | `string` | **Gerekli**. Şifre  |
 
-### Kurulum
+
+#### Bira Fabrikalarını litele
+
+```http
+  GET /breweries?query=pale
+```
+
+| Parametre | Tip     | Açıklama                       |
+| :-------- | :------- | :-------------------------------- |
+| `` | `` | Parametre Yok |
 
 
-Gerekli bağımlılıkları yüklemek için aşağıdaki komutları çalıştırın:
 
-bash
-npm install
-Veritabanı bağlantısını yapılandırmak için config/database.js dosyasını düzenleyin ve MongoDB bağlantı URL'sini ekleyin.
+breweries end pointi için sisteme giriş yapmş olmanız gerekmektedir.
 
-Sunucuyu başlatmak için aşağıdaki komutu kullanın:
+  
+## Bilgisayarınızda Çalıştırın
 
-bash
-Copy code
-npm start
-Kullanım
-Proje başarıyla başlatıldığında, API endpoint'leri aşağıdaki şekillerde kullanılabilir:
+Projeyi klonlayın
 
-Kullanıcı Kaydı: POST /register - Yeni bir kullanıcı kaydı oluşturun.
-Kullanıcı Girişi: POST /login - Varolan bir kullanıcı ile giriş yapın.
-Bira Yerleri Listesi: GET /breweries - Bira yerlerinin bir listesini alın.
-Bira Yeri Detayları: GET /breweries/:id - Belirli bir bira yerinin detaylarını alın.
-Yeni Bira Yeri Ekleme: POST /breweries - Yeni bir bira yeri ekleyin.
+```bash
+  git clone https://github.com/Yunus3emre/Madde.git
+```
+
+Proje dizinine gidin
+
+```bash
+  cd Madde
+```
+
+Gerekli paketleri yükleyin
+
+```bash
+  npm install
+```
+
+Sunucuyu çalıştırın
+
+```bash
+  npm run start
+```
+
+  
